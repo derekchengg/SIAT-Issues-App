@@ -1,4 +1,4 @@
-# SIAT Issue Management App
+# SIAT Issue Management App Prototype
 ---
 Website Link: https://pages.github.sfu.ca/dca130/SIATIssueApp/login.html
 
