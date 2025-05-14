@@ -1,0 +1,292 @@
+/* Search Container */
+.search-container {
+  width: 100%;
+  margin-top: 20px;
+  transition: width 0.3s ease;
+}
+
+/* When filters are active on desktop */
+@media (min-width: 1024px) {
+  .filters-active .search-container {
+    width: calc(100% - 20px);
+    max-width: 77.5%;
+  }
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 30px;
+  padding: 8px 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #666;
+  stroke-width: 2;
+  fill: none;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  padding: 8px 0;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-button svg {
+  width: 16px;
+  height: 16px;
+  stroke: #666;
+}
+
+/* Recent Searches */
+.recent-searches {
+  margin-top: 20px;
+}
+
+.recent-searches h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.recent-searches ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-searches li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Filter Sidebar */
+.filter-sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px; /* Start off-screen */
+  width: 320px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.filter-sidebar.active {
+  right: 0;
+}
+
+.filter-sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-btn {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.category-btn.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Status Toggles */
+.status-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Search container */
+  .search-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Search bar */
+  .search-bar {
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    margin-bottom: 15px;
+  }
+
+  .search-bar input {
+    font-size: 16px;
+  }
+
+  /* Filter button */
+  .filter-button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+  }
+
+  /* Recent searches */
+  .recent-searches h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .recent-searches li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .recent-searches li:last-child {
+    border-bottom: none;
+  }
+
+  /* Filter sidebar */
+  .filter-sidebar {
+    width: 80%;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .filter-sidebar h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* Category buttons */
+  .category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .category-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}
+

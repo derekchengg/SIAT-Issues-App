@@ -1,0 +1,69 @@
+/* Issues List */
+.issues-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  /* Issue Meta */
+  .issue-meta {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .description-text {
+    margin: 10px 0 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    /* Issues list */
+    .issues-list {
+      padding: 0 10px;
+      margin-bottom: 70px;
+      gap: 10px;
+    }
+  
+    .issue-card {
+      border-radius: 10px;
+      margin-bottom: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+  
+    .issue-indicator {
+      width: 6px;
+      border-radius: 10px 0 0 10px;
+    }
+  
+    .issue-content {
+      padding: 12px;
+    }
+  
+    .issue-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+  
+    /* Details panel */
+    .issue-details.active {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 60px;
+      width: 100%;
+      z-index: 1000;
+      overflow-y: auto;
+      background-color: var(--white);
+    }
+  }
+  
+  
