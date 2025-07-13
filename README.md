@@ -1,6 +1,7 @@
 # SIAT Issue Management App Prototype
 ---
 Website Link: https://pages.github.sfu.ca/dca130/SIATIssueApp/login.html
+Figma Process: https://www.figma.com/design/91C7mADXqcoZdUAZkTJS1C/Project-4?node-id=239-2859&t=zkfBNoV7XB3wAfNx-1
 
 ## Page Features
 
